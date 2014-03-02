@@ -1,4 +1,4 @@
 flipdotsim
 ==========
 
-simulates muccc flipdot-interface.
+simulates our flipdot-interface.
