@@ -10,7 +10,7 @@ class FlipdotSim():
                  udpPort = 2323):
         self.udpPort = udpPort
         self.flipdotMatrixSimulatorWidget = FlipdotMatrixSimulatorWidget(imageSize, pixelSize)
-        self.udpHostSocket = socket.socket(socket.AF_INET6, socket.SOCK_DGRAM)
+        self.udpHostSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.udpHostSocket.bind(("", self.udpPort))
 
     def run(self):
