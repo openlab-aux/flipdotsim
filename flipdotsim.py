@@ -1,3 +1,5 @@
+#!/usr/bin/env python2
+
 import thread
 import socket
 import pygame
