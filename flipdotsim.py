@@ -5,7 +5,7 @@ from pygame.locals import *
 
 class FlipdotSim():
     def __init__(self, 
-                 imageSize = (40,16),
+                 imageSize = (80,16),
                  pixelSize = 10, 
                  udpPort = 2323):
         self.udpPort = udpPort
@@ -51,7 +51,7 @@ class FlipdotMatrixSimulatorWidget():
     WHITECOLOR = 1
     
     def __init__(self,
-                 imageSize = (40,16),
+                 imageSize = (80,16),
                  pixelSize = 10): 
         self.imageSize = imageSize
         self.pixelSize = pixelSize
@@ -92,4 +92,4 @@ class FlipdotMatrixSimulatorWidget():
         self.screen.blit(surface, (xValue*self.pixelSize, yValue*self.pixelSize))
         
 if __name__ == '__main__':
-    FlipdotSim(imageSize=(40,16), pixelSize = 10, udpPort=2323).run()
+    FlipdotSim(imageSize=(80,16), pixelSize = 10, udpPort=2323).run()
