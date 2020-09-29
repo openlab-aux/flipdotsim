@@ -61,6 +61,8 @@ class FlipdotMatrixSimulatorWidget():
         pygame.init()
         self.screen = pygame.display.set_mode((imageSize[0]*pixelSize, imageSize[1]*pixelSize))
         self.screen.fill((255,255,255))
+        self.clearPixels()
+        pygame.display.update()
         thread.start_new_thread(self.watchCloseThread, ())
         
     def watchCloseThread(self):
