@@ -1,6 +1,6 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 
-import thread
+import _thread
 import socket
 import pygame
 from pygame.locals import *
@@ -41,7 +41,7 @@ class ImageArrayAdapter():
     def __appendByteToArrayOfBinaryInts(self, byte):
         byteValue = int(byte)
         for i in range(8):
-            if byteValue/(2**(7-i)) > 0:
+            if byteValue // (2**(7-i)) > 0:
                 self.arrayOfBinaryInts.append(1)
             else:
                 self.arrayOfBinaryInts.append(0)
@@ -63,7 +63,7 @@ class FlipdotMatrixSimulatorWidget():
         self.screen.fill((255,255,255))
         self.clearPixels()
         pygame.display.update()
-        thread.start_new_thread(self.watchCloseThread, ())
+        _thread.start_new_thread(self.watchCloseThread, ())
 
     def watchCloseThread(self):
         while True:

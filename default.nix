@@ -3,7 +3,7 @@
 with pkgs;
 
 let
-  pythonEnv = python2Packages.python.withPackages (p: with p; [ pygame ]);
+  pythonEnv = python3Packages.python.withPackages (p: with p; [ pygame ]);
 in
 
 stdenv.mkDerivation {
